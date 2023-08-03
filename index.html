@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Währungsrechner</title>
+  <!-- Web App Manifest-Meta-Tags -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ffffff"> <!-- Hintergrundfarbe der Adressleiste (optional) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="digitale-wahrung.png"> <!-- Icon für iOS -->
+  <link rel="icon" type="image/png" sizes="32x32" href="digitale-wahrung.png"> <!-- Icon für Android -->
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Währungsrechner</h1>
+
+    <label for="exchangeRate">Wechselkurs (1 EUR = ?):</label>
+    <br>
+    <input type="number" id="exchangeRate" step="0.01">
+    <br>
+    <label for="amount">Betrag in Landeswährung:</label><br>
+    <input type="tel" value="" id="amount">
+   <br>
+
+
+    <div id="result">
+    0,00 EUR
+    </div>
+    <div class="calculator">
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+
+        <button>,</button>
+        <button>0</button>
+        <button>C</button>
+
+      </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

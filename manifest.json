@@ -1,0 +1,24 @@
+{
+    "name": "Währungsrechner",
+    "short_name": "Kurs",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "icons": [
+      {
+        "src": "digitale-wahrung.png",
+        "type": "image/png",
+        "sizes": "180x180"
+      },
+      {
+        "src": "digitale-wahrung.png",
+        "type": "image/png",
+        "sizes": "32x32"
+      }
+    ]
+  }
+
+
+
+
