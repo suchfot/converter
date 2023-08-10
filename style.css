@@ -36,8 +36,38 @@ body {
 #amount{
     font-size:2rem;
     max-width:100%;
-    border: none;
+    border: solid 1px #ccc;
+    border-radius: 3px;
 }
+select {
+    appearance: none; /* Entfernt Standard-Browser-Stile */
+    background-color: transparent;
+    border: 1px solid #d1d1d1;
+    padding: 10px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    border-radius: 5px;
+    width: 200px;
+  }
+
+  /* Pfeil-Symbol */
+  select::after {
+    content: "\f107"; /* Unicode für den Dropdown-Pfeil */
+
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #999;
+  }
+
+  /* Fokus-Stil */
+  select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
 #result{
         font-size:2rem;
         padding:0.5rem;

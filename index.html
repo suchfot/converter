@@ -2,26 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="max-age=360000">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Währungsrechner</title>
-  <!-- Web App Manifest-Meta-Tags -->
   <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#ffffff"> <!-- Hintergrundfarbe der Adressleiste (optional) -->
-  <link rel="apple-touch-icon" sizes="180x180" href="digitale-wahrung.png"> <!-- Icon für iOS -->
-  <link rel="icon" type="image/png" sizes="32x32" href="digitale-wahrung.png"> <!-- Icon für Android -->
+  <meta name="theme-color" content="#ffffff">
+  <link rel="apple-touch-icon" sizes="180x180" href="digitale-wahrung.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="digitale-wahrung.png">
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <h1>Währungsrechner</h1>
+    <p>Was willst du in Euro umrechnen?</p>
 
-    <label for="exchangeRate">Wechselkurs (1 EUR = ?):</label>
+    <select size="1" name="quotes" id="quotes"></select>
     <br>
-    <input type="number" id="exchangeRate" step="0.01">
+    <input type="hidden" id="exchangeRate"/>
     <br>
-    <label for="amount">Betrag in Landeswährung:</label><br>
-    <input type="tel" value="" id="amount">
+    <input type="tel" value="100" id="amount" >
    <br>
 
 
