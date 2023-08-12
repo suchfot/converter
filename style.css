@@ -38,29 +38,8 @@ body {
     max-width:100%;
     border: solid 1px #ccc;
     border-radius: 3px;
+    width:100%;
 }
-select {
-    appearance: none; /* Entfernt Standard-Browser-Stile */
-    background-color: transparent;
-    border: 1px solid #d1d1d1;
-    padding: 10px;
-    font-size: 16px;
-    font-family: Arial, sans-serif;
-    border-radius: 5px;
-    width: 200px;
-  }
-
-  /* Pfeil-Symbol */
-  select::after {
-    content: "\f107"; /* Unicode für den Dropdown-Pfeil */
-
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none;
-    color: #999;
-  }
 
   /* Fokus-Stil */
   select:focus {
@@ -77,7 +56,15 @@ select {
         border-radius:5px;
 }
 
-
+select{
+    display: block;
+    padding:3px;
+    border-radius:5px;
+    border: solid 1px #ccc;
+    font-size:1.5rem;
+    overflow: hidden;
+    width: 100%;
+}
   .calculator {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
