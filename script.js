@@ -7,7 +7,9 @@ function calculate(e) {
   let amountInput = document.getElementById("amount");
   const resultElement = document.getElementById("result");
   const exchangeRate = parseFloat(exchangeRateInput.value);
+
   const amount = parseFloat(amountInput.value.replace(/,/g, '.'));
+  console.log(exchangeRate);
   if (isNaN(exchangeRate) || isNaN(amount)) {
     resultElement.textContent = "Bitte gültige Zahlen eingeben.";
   } else {
@@ -28,6 +30,7 @@ function validateInput(event) {
 }
 
 async function loadExchangeRate(quote) {
+  console.log("exchange rate loaded");
   const allKurs = localStorage?.getItem("allKurs");
   if (allKurs !== null) {
     const result = JSON.parse(allKurs);
@@ -123,9 +126,37 @@ fetch('manifest.json')
       }
       quotesElement.appendChild(option);
     }
+    const searchInput = document.createElement('input');
+    searchInput.type = 'text';
+    searchInput.id = 'searchinput';
+    searchInput.placeholder = 'Währungen durchsuchen...';
+    searchInput.addEventListener('input', function () {
+      const searchValue = this.value.toLowerCase();
+      const options = document.querySelectorAll('#quotes option');
+      options.forEach(option => {
+        const optionText = option.textContent.toLowerCase();
+        const optionValue = option.value.toLowerCase();
+        if (optionText.includes(searchValue) || optionValue.includes(searchValue)) {
+          option.style.display = 'block';
+          option.selected = true;
+        } else {
+          option.style.display = 'none';
+          option.selected = false;
+        }
+      });
+      if (searchValue.length == 0) {
+        document.getElementById("quotes").size = 1;
+      } else {
+        const blockOptions = Array.from(options).filter(option => option.style.display === 'block');
+        document.getElementById("quotes").size = Math.min(blockOptions.length, 15);
+      }
+    });
+    quotesElement.parentNode.insertBefore(searchInput, quotesElement);
     document.getElementById('quotes').addEventListener('change', async function () {
       localStorage.setItem("quotes", this.value);
-     await loadExchangeRate(this.value);
+      document.getElementById("quotes").size = 1;
+      document.getElementById("searchinput").value = "";
+      await loadExchangeRate(this.value);
     });
 
   })

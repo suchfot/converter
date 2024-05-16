@@ -1,87 +1,103 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-  }
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
 * {
-    box-sizing: border-box ;
-}
-  .container {
-    max-width: 600px;
-    width:100%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    height: 100vh;
-  }
-
-  h1 {
-    text-align: center;
-  }
-
-  label,
-  input,
-  button {
-    display: block;
-    margin-bottom: 10px;
-    margin:0 auto;
-    text-align: center;
-    border-radius:5px;
-
-}
-#amount{
-    font-size:2rem;
-    max-width:100%;
-    border: solid 1px #ccc;
-    border-radius: 3px;
-    width:100%;
+  box-sizing: border-box;
 }
 
-  /* Fokus-Stil */
-  select:focus {
-    outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  }
-#result{
-        font-size:2rem;
-        padding:0.5rem;
-        background: black;
-        color: #06dd06;
-        margin-bottom:1rem;
-        border-radius:5px;
+.container {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: 100vh;
 }
 
-select{
-    display: block;
-    padding:3px;
-    border-radius:5px;
-    border: solid 1px #ccc;
-    font-size:1.5rem;
-    overflow: hidden;
-    width: 100%;
+h1 {
+  text-align: center;
 }
-  .calculator {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 5px;
-    max-width: 300px;
-    margin: 0 auto;
-    text-align: center;
-    touch-action: manipulation;
-  }
-  .calculator button {
-    font-size: 1.5rem;
-    padding: 0.5rem 2rem;
-    border: 1px solid #ccc;
-    background-color: #f8f8f8;
-    cursor: pointer;
-    border-radius: 3px;
-  }
-  .calculator button:hover {
-    background-color: #e0e0e0;
-  }
+
+label,
+input,
+button {
+  display: block;
+  margin-bottom: 10px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 5px;
+
+}
+
+#amount {
+  font-size: 2rem;
+  max-width: 100%;
+  border: solid 1px #ccc;
+  border-radius: 3px;
+  width: 100%;
+}
+
+/* Fokus-Stil */
+select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#result {
+  font-size: 2rem;
+  padding: 0.5rem;
+  background: black;
+  color: #06dd06;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+select {
+  display: block;
+  padding: 3px;
+  border-radius: 5px;
+  border: solid 1px #ccc;
+  font-size: 1.5rem;
+  overflow: hidden;
+  width: 100%;
+}
+
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  touch-action: manipulation;
+}
+
+.calculator button {
+  font-size: 1.5rem;
+  padding: 0.5rem 2rem;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.calculator button:hover {
+  background-color: #e0e0e0;
+}
+
+#searchinput {
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 3px;
+  border: solid 1px black;
+  background: #fff;
+  border-radius: 2px;
+}
